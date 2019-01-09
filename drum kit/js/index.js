@@ -4,7 +4,7 @@ const domArray = [
     title: 'A',
     description: 'CLAP',
     keyCode: 65,
-    musicUrl: './static/audio/clap.wav'
+    musicUrl: './static/audio/clap.mp3'
   },
   {
     id: 'HIHAT',
@@ -66,11 +66,9 @@ const domArray = [
 
 const prodcutionDom = document.getElementById('container');
 let msg = domArray.map((item,index) => {
-  console.log(item,index)
-  return `<div id=${item.id} key={index}><p>${item.title}</p><span>${item.description}</span><audio src=${item.musicUrl} id=${item.id.toLowerCase()}></div>`
+  return `<div id=${item.id} key=${index}><p>${item.title}</p><span>${item.description}</span><audio src=${item.musicUrl} id=${item.id.toLowerCase()}></div>`
 })
 prodcutionDom.innerHTML = msg;
-
 
 document.onkeydown = (e)=>{
   const keyCode = e.keyCode;
