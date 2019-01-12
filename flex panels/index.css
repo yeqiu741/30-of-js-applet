@@ -1,0 +1,28 @@
+*{
+  padding: 0;
+  margin: 0
+}
+
+#container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 20px;
+  text-align: center;
+  color: red;
+}
+
+#container div{
+  border: 5px solid yellow;
+  width: 20%;
+  position: relative;
+  top: 0;
+  bottom: 0;
+}
+.pTop , .pBottom{
+  line-height: 282px;
+  opacity:0;
+}
+.pCenter{
+  line-height: 315px;
+}
