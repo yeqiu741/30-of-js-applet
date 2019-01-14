@@ -10,19 +10,20 @@
   font-size: 20px;
   text-align: center;
   color: red;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 #container div{
   border: 5px solid yellow;
   width: 20%;
   position: relative;
-  top: 0;
-  bottom: 0;
+  height: 928px;
 }
 .pTop , .pBottom{
-  line-height: 282px;
   opacity:0;
-}
-.pCenter{
-  line-height: 315px;
+  position: relative;
 }
