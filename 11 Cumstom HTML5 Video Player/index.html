@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./index.css">
+  <title>html video play</title>
+</head>
+<body>
+  <div id="container">
+    <video src="./1.mp4" id="video"></video>
+    <button class="play">
+      <img src="./播放.png" alt="">
+    </button>
+    <input type="range" name="range" id="range" max=100 min=0 value="0">
+    <span class="startTime">00:00</span>
+    <span class="endTime">00:00</span>
+    <button class="stop">
+      <img src="./停止.png" alt="">
+    </button>
+    <button class="screen">
+      <img src="./全屏.png" alt="">
+    </button>
+  </div>
+</body>
+<script src="index.js"></script>
+</html>

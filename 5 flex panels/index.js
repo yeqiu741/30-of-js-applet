@@ -79,11 +79,27 @@ function transform(e){
         this.children[0].style.top = margin+'px'
         this.children[2].style.bottom = margin+'px'
       } 
-    },60)
+    },100)
   }else{
-    this.style.width = '20%'
-    this.style.fontSize = '20px';
-    this.children[0].style.opacity = 0
-    this.children[2].style.opacity = 0
+    let fontSize = 25
+    let width = 50
+    let opacity = 1
+    let margin = 150
+    const b = setInterval(() => {
+      if(fontSize === 20){
+        clearInterval(b)
+      }else{
+        fontSize -=1
+        width -= 6
+        opacity -= 0.2
+        margin -= 30
+        this.style.fontSize = fontSize+'px'
+        this.style.width = width+'%'
+        this.children[0].style.opacity = opacity
+        this.children[2].style.opacity = opacity
+        this.children[0].style.top = margin+'px'
+        this.children[2].style.bottom = margin+'px'
+      }
+    }, 100);
   }
 }

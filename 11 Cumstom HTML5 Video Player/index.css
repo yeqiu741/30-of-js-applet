@@ -1,0 +1,101 @@
+*{
+  padding: 0;
+  margin: 0
+}
+#container{
+  width: 1000px;
+  height: 800px;
+  border: 1px solid skyblue;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: skyblue;
+  box-shadow: 10px 10px 80px skyblue; 
+}
+
+video{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+
+.play{
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: .1px solid rgba(0, 0, 0, .01);
+  background-color: rgba(0,0,0,.08);
+  outline: none;
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+}
+input[type="range"] {
+  -webkit-appearance: none; /*去除默认样式*/
+  background-color: #ebeff4;
+  border-radius: 15px;
+  width: 84% !important;
+  height:15px;
+  padding: 0;
+  order: none;
+  outline: none;
+  position: absolute;
+  bottom: 25px;
+  left: 80px;
+}
+/* input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  cursor: default;
+  top: -5px;
+  height: 30px;
+  width: 150px;
+  transform: translateY(-4px);
+  background: none repeat scroll 0 0 #777;
+  border-radius: 15px;
+} */
+.startTime{
+  position: absolute;
+  left: 80px;
+  bottom: 0;
+  width: 45px;
+  height: 22px;
+}
+.endTime{
+  position: absolute;
+  right: 80px;
+  bottom: 0;
+  width: 45px;
+  height: 22px;
+}
+.stop{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: .1px solid rgba(0, 0, 0, .01);
+  background-color: rgba(0,0,0,.08);
+  outline: none;
+  position: absolute; 
+  left: 60px;
+  bottom: 48px;
+}
+.screen{
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: .1px solid rgba(0, 0, 0, .01);
+  background-color: rgba(0,0,0,.08);
+  outline: none;
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+}
+/*全屏模式下隐藏原生控制栏*/
+video::-webkit-media-controls{
+  display:none !important;
+}
