@@ -12,12 +12,6 @@ function play(){
   }else{
     this.children[0].src = './暂停.png'
     videoDom.play();
-    const time = videoDom.duration //获取当前视频的总时长。chorme不支持视频的预加载好像。所以必须在play()函数执行后才能获取时长
-    inputDom.max = time
-    // 显示总的时长
-    const second = time%60
-    const miu = parseInt(time/60)
-    document.querySelector('.endTime').innerHTML = miu+':'+second
   }
 }
 // 视频的时间更新事件
@@ -28,11 +22,30 @@ function changeSliderTime(){
   const miu = parseInt(inputDom.value/60)
   document.querySelector('.startTime').innerHTML = miu+':'+inputDom.value
 }
+// 视频播放结束事件
+videoDom.addEventListener('ended',changeSliderTime1)
+function changeSliderTime1(){
+  videoDom.currentTime = 0
+  inputDom.value = 0
+}
+
+// 浏览器获取完毕媒体的时间长和字节数
+videoDom.addEventListener('loadedmetadata',changeSliderTime2)
+function changeSliderTime2(){
+  const time = videoDom.duration //获取当前视频的总时长。
+  inputDom.max = time
+  // 显示总的时长
+  const second = time%60
+  const miu = parseInt(time/60)
+  document.querySelector('.endTime').innerHTML = miu+':'+second
+}
 
 // 让进度条改变视频的播放进度
 inputDom.addEventListener('click',changetime)
 function changetime(){
+  videoDom.pause()
   videoDom.currentTime = this.value
+  videoDom.play()
 }
 // 控制视频停止
 document.querySelector('.stop').addEventListener('click',stopPlay)
