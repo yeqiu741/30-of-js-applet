@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="index.css">
+  <title>get user media code along</title>
+</head>
+<body>
+  <div id="takePhoto">
+    <button>拍照</button>
+  </div>
+  <div id="controlers">
+    <span>red_min:</span> <input type="range" name="red_min" id="red_min" min="0" max="255" value="0">
+    <span>red_max:</span><input type="range" name="red_max" id="red_max" min="0" max="255" value="0">
+    <span>green_min:</span><input type="range" name="green_min" id="green_min" min="0" max="255" value="0">
+    <span>green_max:</span><input type="range" name="green_max" id="green_max" min="0" max="255" value="0">
+    <span>blue_min:</span><input type="range" name="blue_min" id="blue_min" min="0" max="255" value="0">
+    <span>blue_max:</span><input type="range" name="blue_max" id="blue_max" min="0" max="255" value="0">
+  </div>
+  <video autoplay="autoplay"></video>
+</body>
+<script src="index.js"></script>
+</html>
