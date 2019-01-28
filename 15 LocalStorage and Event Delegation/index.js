@@ -35,8 +35,9 @@ function addItem(){
 }
 
 // 给每个信息框加个事件
-const msgDom = document.querySelectorAll('.item')
-const msgArray = Array.from(msgDom)
+let msgDom = document.querySelectorAll('.item')
+// let msgDom = document.getElementsByClassName('item')
+let msgArray = Array.from(msgDom)
 msgArray.forEach(item => {
   item.id = 'true'
   item.addEventListener('click', changeImg)
@@ -57,6 +58,8 @@ const btnArr = Array.from(checkAllDom)
 // check All
 btnArr[1].addEventListener('click', checkAll)
 function checkAll(){
+  msgDom = document.getElementsByClassName('item')
+  msgArray = Array.from(msgDom)
   msgArray.forEach(item => {
     item.children[0].src = './对号.png'
   })

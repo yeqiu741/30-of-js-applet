@@ -1,0 +1,18 @@
+h1{
+  text-align: center;
+  overflow-wrap: inherit;
+  margin-top: auto;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  bottom: 0;
+  right: 0;
+}
+body{
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}

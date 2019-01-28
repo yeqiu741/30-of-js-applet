@@ -31,38 +31,30 @@ artArr.forEach((item,index) => {
   }
   divDom.appendChild(pDom)
 })
-window.onscroll=() => {
+window.onscroll = () => {
   console.log(window.scrollY)
   const imgNodeList = document.querySelectorAll('img')
   imgDomList = Array.from(imgNodeList)
+  console.log(imgDomList)
   if(window.scrollY >= 200){
-    imgDomList[0].classList.toggle('img_active')
-  }else if(window.scrollY >= 900){
-    imgDomList[0].classList.toggle('img_active')
-    imgDomList[1].classList.toggle('img_active')
-  }else if(window.scrollY >= 2000){
-    imgDomList[2].classList.toggle('img_active')    
-    imgDomList[0].classList.toggle('img_active')
-    imgDomList[1].classList.toggle('img_active')
+    imgDomList[0].style.opacity = 1
+    imgDomList[0].style.transition = 'all 4s'
+    if(window.scrollY >= 714){
+      imgDomList[1].style.opacity = 1
+      imgDomList[1].style.transition = 'all 4s'
+      if(window.scrollY >= 1700){
+        imgDomList[2].style.opacity = 1
+        imgDomList[2].style.transition = 'all 4s'
+      }else{
+        imgDomList[2].style.opacity = 0
+        imgDomList[2].style.transition = 'all 4s'
+      }
+    }else{
+      imgDomList[1].style.opacity = 0
+      imgDomList[1].style.transition = 'all 4s'
+    }
+  }else{
+    imgDomList[0].style.opacity = 0
+    imgDomList[0].style.transition = 'all 4s'
   }
-  // if(window.scrollY >= 200){
-  //   const imgNodeList = document.querySelectorAll('img')
-  //   imgDomList = Array.from(imgNodeList)
-  //   console.log(imgDomList)
-  //   imgNodeList.forEach(item => {
-  //     console.log(item.offsetTop)
-  //     if(item.offsetTop >= 904){
-  //       item.className = 'img_active'
-  //     }else if(item.offsetTop >= 1592){
-  //       item.className = 'img_active'
-  //     }else if(item.offsetTop >= 2708){
-  //       item.className = 'img_active'
-  //     }
-  //   })
-  // }else{
-    
-  //   imgDomList.forEach(item => {
-  //     item.className = 'img'   
-  //   })
-  // }200 900 2000
 }
