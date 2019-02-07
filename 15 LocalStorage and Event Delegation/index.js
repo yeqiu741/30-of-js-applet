@@ -39,6 +39,8 @@ let msgDom = document.querySelectorAll('.item')
 // let msgDom = document.getElementsByClassName('item')
 let msgArray = Array.from(msgDom)
 msgArray.forEach(item => {
+console.log(msgArray)
+
   item.id = 'true'
   item.addEventListener('click', changeImg)
 })
@@ -62,6 +64,7 @@ function checkAll(){
   msgArray = Array.from(msgDom)
   msgArray.forEach(item => {
     item.children[0].src = './对号.png'
+    this.id = 'false'
   })
 }
 // unCheck All
@@ -69,6 +72,7 @@ btnArr[2].addEventListener('click', unCheckAll)
 function unCheckAll(){
   msgArray.forEach(item => {
     item.children[0].src = './方框.png'
+    this.id = 'true'
   })
 }
 

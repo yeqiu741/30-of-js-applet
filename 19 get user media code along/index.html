@@ -12,14 +12,15 @@
     <button>拍照</button>
   </div>
   <div id="controlers">
-    <span>red_min:</span> <input type="range" name="red_min" id="red_min" min="0" max="255" value="0">
-    <span>red_max:</span><input type="range" name="red_max" id="red_max" min="0" max="255" value="0">
-    <span>green_min:</span><input type="range" name="green_min" id="green_min" min="0" max="255" value="0">
-    <span>green_max:</span><input type="range" name="green_max" id="green_max" min="0" max="255" value="0">
-    <span>blue_min:</span><input type="range" name="blue_min" id="blue_min" min="0" max="255" value="0">
-    <span>blue_max:</span><input type="range" name="blue_max" id="blue_max" min="0" max="255" value="0">
-  </div>
-  <video autoplay="autoplay"></video>
+    <span>red:</span> <input type="range" name="red_min" id="red_min" min="0" max="255" value="0">
+    <span>green:</span><input type="range" name="green_min" id="green_min" min="0" max="255" value="0">
+    <span>blue:</span><input type="range" name="blue_max" id="blue_max" min="0" max="255" value="0">
+    <video autoplay="autoplay" ></video>
+    <div id="showarea">
+      <img id="img" alt="">
+      <canvas id='canvas' width='400' height='300'></canvas>
+    </div>
+</div> 
 </body>
 <script src="index.js"></script>
 </html>
